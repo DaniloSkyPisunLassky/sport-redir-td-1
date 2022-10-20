@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    	
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    var queryParams = new URLSearchParams(window.location.search);
+    var customParam = queryParams.get('id');
+    fbq('init', customParam);
+    fbq('track', 'PageView');
+        </script>
+  <!-- End Meta Pixel Code -->
+  <title>Redir</title>
+</head>
+
+<body>
+  <button id="click"  onclick="clickHandler()">redir</button>
+</body>
+<script>
+  //
+  const url = "https://t.me/+ZPRz1tm9G3kzNzAy";
+  //
+
+  const clickHandler = () => {
+          window.location.href = url;
+          fbq("track", "Lead");
+}
+
+  if (typeof window !== "undefined") {
+    window.onload = function () {
+      // 3 minutes
+
+      // setTimeout(
+      //   () => document.getElementById("click").click(),
+      //   1000 * 60 * 3
+      // );
+
+      // instant
+
+      document.getElementById("click").click();
+    };
+  }
+</script>
+
+</html>
